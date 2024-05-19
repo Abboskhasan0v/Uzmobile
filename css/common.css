@@ -37,10 +37,10 @@ input, textarea, button {
 }
 
 .container {
-    max-width: 1210px;
+    max-width: 1246px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 24px;
 }
 
 .btn {
@@ -72,7 +72,7 @@ input, textarea, button {
 }
 
 .title {
-    font-size: clamp(24px,3vw,40px);
+    font-size: clamp(24px,3vw,38px);
     color: #000;
     letter-spacing: -2%;
 }

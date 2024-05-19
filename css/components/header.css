@@ -25,6 +25,7 @@
     display: flex;
     gap: 56px;
     align-items: center;
+    position: relative;
     @media (width <= 992px) {
         gap: 29px;
     }

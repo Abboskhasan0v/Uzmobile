@@ -1,0 +1,211 @@
+.popular {
+    padding-top: clamp(64px,5vw,150px);
+}
+.popular .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.popular__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.popular__all-link {
+    color: #000;
+    font-weight: 600;
+    font-size: 24px;
+    border-bottom: 3px solid #000;
+    @media (width <= 576px) {
+        display: none;
+    }
+}
+.popular__cards {
+    display: grid;
+    --columns: 2;
+    grid-template-columns: repeat(var(--columns),1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 16px;
+    @media (width <= 992px) {
+        --columns: 1;
+    }
+
+}
+.popular__card {
+    padding: 26px clamp(26px,2vw,44px);
+    box-shadow: 0 2px 2px 0 rgba(188, 188, 188, 0.25);
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.popular__card:nth-of-type(3),
+.popular__card:nth-of-type(4) {
+    @media (width <= 576px) {
+        display: none;
+    }
+}
+.popular__card-bg {
+    position: absolute;
+    z-index: -1;
+}
+.popular__card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 92px;
+    padding-top: 16px;
+    @media (width <= 375px) {
+        padding-left: 20px;
+    }
+}
+.popular__card-title {
+    font-size: 32px;
+    font-weight: 600;
+    @media (width <= 576px) {
+        font-size: 22px;    
+    }
+    @media (width <= 375px) {
+        text-align: center;
+    }
+}
+.popular__card-note {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 200%;
+    border: 1px solid transparent;
+    transition: 0.2s;
+    &:hover {
+        border: 1px solid black;
+        color: black;
+        background: transparent;
+    }
+    @media (width <= 576px) {
+        span {
+            display: none;
+        }
+    }
+    @media (width <= 375px) {
+        display: none;
+    }
+}
+.popular__card-info {
+    display: flex;
+    gap: 32px 50px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+
+    @media (width <= 412px) {
+        flex-direction: column;
+    }
+
+    span {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-weight: 500;
+        font-size: 18px;
+    }
+}
+.popular__card-bottom {
+    padding-top: 26px;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (width <= 412px) {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+}
+.popular__card-price {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    span {
+        font-weight: 900;
+        font-size: clamp(22px,1vw,24px);
+        letter-spacing: -2%;
+    }
+}
+.popular__card-btns {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.popular__card-btn {
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.4s;
+}
+.popular__card-btn:nth-of-type(1) {
+    padding: 10px 41px;
+    border: 1px solid black;
+    color: #000;
+    position: relative;
+    overflow: hidden;
+    z-index: 2x;
+    transition: 0.4s;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 200%;
+        background: #000;
+        left: 0;
+        top: -50%;
+        z-index: -1;
+        border-radius: 0 50% 50% 0;
+        transition: 0.4s;
+    }
+    &:hover {
+        &::before {
+            width: 120%;
+        }
+        color: #fff;
+    }
+}
+.popular__card-btn:nth-of-type(2) {
+    padding: 10px 20px;
+    
+    &:hover {
+        color: var(--primary-color);
+    }
+    @media (width <= 1199px) {
+        display: none;
+    }
+    @media (width <= 992px) {
+        display: inline-block;
+    }
+    @media (width <= 636px) {
+        display: none;
+    }
+}
+
+.popular__all-btn {
+    width: 100%;
+    padding: 16px 0;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.4s;
+    display: none;
+    &:hover {
+        color: var(--primary-color);
+    }
+    @media (width <= 576px) {
+        display: flex;
+    }
+}

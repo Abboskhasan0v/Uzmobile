@@ -1,5 +1,5 @@
 .services {
-    padding-top: 142px;
+    padding-top: clamp(64px,5vw,142px);
 }
 .services .container {
     display: flex;
