@@ -1,0 +1,59 @@
+.location {
+    padding-top: clamp(64px,5vw,150px);
+}
+.location .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: clamp(15px,2vw,30px);
+
+    @media (width <= 576px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+}
+.location__map {
+    width: 100%;
+
+    iframe {
+        width: 100%;
+        min-height: 458px;
+        max-height: 662px;
+    }
+}
+.location__form {
+    display: flex;
+    align-items: center;
+    width: 180px;
+    position: relative;
+    select {
+        width: 100%;
+        appearance: none;
+        background: transparent;
+        border: none;
+        font-size: 22px;
+        font-weight: 600;
+        outline: none;
+        
+    }
+    svg {
+        position: absolute;
+        right: 0;
+    }
+    @media (width <= 576px) {
+        background: #fff;
+        width: 100%;
+        padding: 12px 24px;
+        border-radius: 6px;
+        select {
+            font-size: 14px;
+            font-weight: 500;
+            
+        }
+        svg {
+            width: 10px;
+            right: 24px;
+        }
+    }
+}
