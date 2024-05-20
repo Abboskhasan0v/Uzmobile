@@ -1,0 +1,215 @@
+.footer {
+    padding: 50px 0 17px;
+    background: #fff;
+}
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 53px;
+    flex-wrap: wrap;
+    gap: 50px 16px;  
+
+    @media (width <= 480px) {
+        flex-direction: column;
+    }
+}
+.footer__top-card {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.footer__top-card_dropdown {
+    @media (width <= 480px) {
+        max-height: 48px;
+        overflow: hidden;
+        border-radius: 10px;
+        transition: 0.4s;
+
+        .footer__top-list {
+            padding-left: 10px;
+        }
+        .footer__top-title svg {
+            transition: 0.4s;
+        }
+        &:hover {
+            background: rgba(0, 0, 0, 0.03);
+        }
+        &:active {
+            max-height: 426px;
+
+            .footer__top-title {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+.footer__top-card-dd {
+    margin-top: -30px !important;
+}
+.footer__top-card:nth-of-type(1) {
+    .footer__top-list {
+        gap: 38px;
+    }
+}
+.footer__top-list_row {
+    @media (width <= 480px) {
+        flex-direction: row !important;
+        gap: 48px;
+        .footer__top-item:nth-of-type(4) {
+            display: none;
+        }
+    }
+    @media (width <= 360px) {
+        gap: 20px !important;
+    }
+}
+.footer__top-title {
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -2%;
+
+    @media (width <= 480px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 13px 12px 8px;
+
+    }
+    svg {
+        display: none;
+        @media (width <= 480px) {
+            display: flex;
+        }
+    }
+}
+.footer__top-title_none {
+    @media (width <= 480px) {
+        display: none;
+    }
+}
+.footer__top-list{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.footer__top-link {
+    display: flex;
+    color: #000;
+    align-items: flex-start;
+    line-height: 1;
+    gap: 8px;
+    transition: 0.3s;
+
+    svg g path {
+    transition: 0.3s;
+    }
+    &:hover {
+        color: var(--primary-color);
+        svg g path {
+            fill: var(--primary-color);
+        }
+    }
+    span {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        .call__number {
+            font-size: 20px;
+            @media (width <= 360px) {
+                font-size: 18px;
+            }
+        } 
+    }
+}
+.footer__top-list-txt {
+    font-size: 14px;
+    opacity: 0.3;
+
+    @media (width <= 480px) {
+        display: none;
+    }
+}
+.footer__top-card_info {
+    margin-top: 34px;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+
+    @media (width <= 480px) {
+        display: none;
+    }
+}
+.footer__top-btns {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.footer__top-btn {
+    display: flex;
+    align-items: center;
+    padding: 9.8px 11px;
+    gap: 7px;
+    border: 2px solid black;
+    border-radius: 8px;
+    color: black;
+    font-size: 14px;
+    transition: 0.3s;
+    svg path {
+        transition: 0.3s;
+    }
+    &:hover {
+        color: #fff;
+        background: #000;
+        svg path {
+            fill: #fff;
+        }
+    }
+}
+.footer__bottom {
+    padding-top: 33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (width <= 480px) {
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+    }
+}
+.footer__bottom-txt {
+    font-size: 14px;
+    opacity: 0.3;
+
+    @media (width <= 480px) {
+        order: 2;
+        span {
+            display: none;
+        }
+    }
+}
+.footer__bottom-socials {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    
+}
+
+.footer__top-card_hidden {
+    display: none;
+
+    @media (width <= 480px) {
+        display: flex;
+    }
+
+    .footer__top-btns {
+        .footer__top-btn {
+            @media (width <= 360px) {
+                font-size: 12px;
+            }
+        }
+    }
+}
